@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #df6b6b;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.large {
+  height: 100px;
+  z-index: 1;
+  width: 100px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation-fill-mode: both;
+  animation: large-1 3s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+}
+
+.medium {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  animation-fill-mode: both;
+  animation: medium-1 3s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+}
+
+.small {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  bottom: 35px;
+  left: 35px;
+  z-index: 3;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  animation-fill-mode: both;
+  animation: small-1 3s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+}
+
+@keyframes large-1 {
+  0%,
+  70% {
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+  }
+
+  100% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+  }
+}
+
+@keyframes medium-1 {
+  0%,
+  70% {
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+  }
+  100% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+  }
+}
+
+@keyframes small-1 {
+  0%,
+  70% {
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+  }
+  100% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+  }
+}
