@@ -1,0 +1,235 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #41989a;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 200px;
+  width: 250px;
+  background: white;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+}
+
+.toper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 250px;
+  height: 70px;
+  background: rgb(232, 195, 10);
+  overflow: hidden;
+}
+
+.content-toper {
+  position: absolute;
+}
+
+.week {
+  display: flex;
+}
+
+.week-left {
+  padding: 5px;
+}
+
+.p1 {
+  font-size: 12px;
+  margin: 5px;
+  font-weight: 700;
+  color: white;
+  margin-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.days {
+  font-size: 9px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.week-right {
+  padding: 5px;
+}
+
+.revenue {
+  position: absolute;
+  font-size: 12px;
+  margin: 5px;
+  font-weight: lighter;
+  color: white;
+  top: 15px;
+  left: 180px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.price {
+  width: 100px;
+  position: absolute;
+  margin: 5px;
+  font-size: 12px;
+  top: 30px;
+  left: 174px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+.bott {
+  background: rgb(236, 238, 239);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 250px;
+  height: 130px;
+}
+
+.parameter {
+  text-align: right;
+  padding: 10px 0 14px 0;
+}
+
+span {
+  position: relative;
+  font-size: 10px;
+  color: #606060;
+  line-height: 13px;
+  padding: 0 10px 0 25px;
+}
+
+span:before {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  display: block;
+  content: "";
+  width: 11px;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.red:before {
+  background: red;
+}
+
+.blue::before {
+  background: blue;
+}
+
+.statistic {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  left: 0;
+  background: rgb(236, 238, 239);
+  width: 250px;
+  height: 65px;
+}
+
+.line-1 {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 225px;
+  left: 10px;
+  background: rgb(194, 193, 193);
+  height: 0.1px;
+}
+
+.line-2 {
+  top: 30px;
+  right: 0;
+  position: absolute;
+  width: 225px;
+  left: 10px;
+  background: rgb(194, 193, 193);
+  height: 0.1px;
+}
+
+.line-3 {
+  top: 60px;
+  left: 10px;
+  position: absolute;
+  width: 225px;
+  right: 0;
+  background: rgb(194, 193, 193);
+  height: 0.1px;
+}
+.data {
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  polyline {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  &.red polyline {
+    stroke: red;
+  }
+
+  &.blue polyline {
+    stroke: blue;
+  }
+
+  .tooltip {
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translate3d(-50%, 10px, 0);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 11px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+  }
+  &:after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 6px;
+    width: 6px;
+    left: 50%;
+    margin-left: -3px;
+    bottom: -3px;
+    transform: rotate(45deg);
+  }
+}
